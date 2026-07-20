@@ -22,7 +22,8 @@ st.write("Predict crop yield using Machine Learning")
 
 @st.cache_data # Cache data loading for performance
 def load_and_preprocess_data():
-    df = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/Sample Data/crop_production.csv")
+    # df = pd.read_csv("/content/drive/MyDrive/Colab Notebooks/Sample Data/crop_production.csv")
+    df = pd.read_csv("crop_production.csv)
     df.drop_duplicates(inplace=True)
     df = df[df['Area'] > 0]
     df['Yield'] = df['Production'] / df['Area']
